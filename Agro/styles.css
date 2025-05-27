@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blog de Curiosidades do Campo e da Cidade</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto+Slab&display=swap');
+&nbsp;
+&nbsp;
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: #f9fbf8;
+    font-family: 'Poppins', sans-serif;
+    color: #2e2e2e;
+    line-height: 1.6;
+  }
+  header {
+    background: #1e3d23;
+    color: #e6f0e9;
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    box-shadow: 0 6px 12px rgb(30 61 35 / 0.6);
+  }
+  header h1 {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  header p {
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #bcdbb6;
+  }
+&nbsp;
+&nbsp;
+
+  nav {
+    background: #367147;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 10px rgba(54,113,71,0.6);
+  }
+  nav a {
+    color: #d6ead4;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 2rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav a:hover,
+  nav a.active {
+    background: #e6f0e9;
+    color: #2a4d23;
+    box-shadow: 0 2px 6px rgba(255 255 255 / 0.9);
+  }
+&nbsp;
+&nbsp;
+
+  main {
+    max-width: 1000px;
+    margin: 2rem auto 5rem;
+    padding: 0 1.5rem;
+  }
+&nbsp;
+&nbsp;
+
+  /* Blog Category Sections */
+  section.blog-category {
+    margin-bottom: 5rem;
+  }
+  section.blog-category h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.4rem;
+    color: #2f4f24;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid #6a9e4d;
+  }
+&nbsp;
+&nbsp;
+
+  /* Blog Post Card */
+  article.post {
+    background: #e4f0e2;
+    border-radius: 14px;
+    box-shadow: 0 19px 38px rgba(97, 151, 73, 0.25), 0 15px 12px rgba(97, 151, 73, 0.22);
+    padding: 1.8rem 2rem 2rem;
+    margin-bottom: 2.5rem;
+    transition: box-shadow 0.3s ease;
+  }
+  article.post:hover {
+    box-shadow: 0 25px 50px rgba(86, 141, 50, 0.35), 0 20px 18px rgba(86, 141, 50, 0.3);
+  }
+&nbsp;
+&nbsp;
+
+  /* Post Titles */
+  article.post h3 {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    color: #30642d;
+    display: flex;
+    align-items: center;
+  }
+  article.post h3::before {
+    content: "🌾";
+    margin-right: 8px;
+    font-size: 1.6rem;
+  }
+  section.city .post h3::before {
+    content: "🏙️";
+    color:#3a4a73;
+  }
+  section.city article.post {
+    background: #d7e9fb;
+    box-shadow: 0 19px 38px rgba(49, 86, 155, 0.25), 0 15px 12px rgba(49, 86, 155, 0.22);
+  }
+  section.city article.post:hover {
+    box-shadow: 0 25px 50px rgba(40, 76, 140, 0.35), 0 20px 18px rgba(40, 76, 140, 0.3);
+  }
+  /* Post meta info */
+  .post-meta {
+    font-size: 0.9rem;
+    color: #465d39;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  section.city .post-meta {
+    color: #34406e;
+  }
+  /* Post content */
+  article.post p {
+    font-size: 1rem;
+    color: #3a4f29;
+  }
+  section.city article.post p {
+    color: #2a3a5a;
+  }
+  /* Footer */
+  footer {
+    background: #367147;
+    color: #d0e8bb;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1rem;
+    box-shadow: inset 0 2px 10px #4d7430;
+  }
+  /* Responsive */
+  @media (max-width: 720px) {
+    nav {
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    main {
+      padding: 0 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Blog de Curiosidades do Campo e da Cidade</h1>
+  <p>Fatos fascinantes para você conhecer a fundo o rural e o urbano!</p>
+</header>
+<nav>
+  <a href="#campo" class="active" onclick="switchCategory(event)">Campo</a>
+  <a href="#cidade" onclick="switchCategory(event)">Cidade</a>
+</nav>
+&nbsp;
+&nbsp;
+
+<main>
+  <section id="campo" class="blog-category campo">
+    <h2>Curiosidades Sobre o Campo</h2>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Maior Produtor de Café</h3>
+      <div class="post-meta">Autor: Rural Expert | 10 de Abril, 2024</div>
+      <p>O Brasil é o maior produtor de café do mundo, e grande parte da produção vem das fazendas do interior, especialmente do estado de Minas Gerais.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Vida Lenta e Ritmada</h3>
+      <div class="post-meta">Autor: Natureza Viva | 12 de Março, 2024</div>
+      <p>No campo, a rotina acompanha os ciclos da natureza, com ritmos que variam conforme as estações e o tempo de cultivo das plantações.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Animais Silvestres</h3>
+      <div class="post-meta">Autor: Fauna BR | 5 de Fevereiro, 2024</div>
+      <p>Muitos animais selvagens, como tamanduás, capivaras e veados, ainda vivem livres e próximos às áreas rurais do Brasil.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Ar Puro e Natureza</h3>
+      <div class="post-meta">Autor: Vida Saudável | 20 de Janeiro, 2024</div>
+      <p>O ar do campo é significativamente mais puro devido à ausência de poluição industrial e trânsito intenso, beneficiando a saúde dos moradores.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Festividades Tradicionais</h3>
+      <div class="post-meta">Autor: Cultura Popular | 25 de Março, 2024</div>
+      <p>Eventos como festas juninas, rodeios e celebrações religiosas são comuns e valorizam a cultura tradicional do campo.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Agroecologia e Sustentabilidade</h3>
+      <div class="post-meta">Autor: Sustentabilidade Rural | 28 de Fevereiro, 2024</div>
+      <p>O campo tem sido palco de práticas sustentáveis, combinando a agricultura com a preservação do meio ambiente para garantir futuro melhor.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Plantas Medicinais</h3>
+      <div class="post-meta">Autor: Plantas e Saúde | 14 de Abril, 2024</div>
+      <p>Muitas plantas cultivadas ou encontradas no campo são usadas tradicionalmente para tratar doenças naturais e promover a saúde.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Lendas e Folclore</h3>
+      <div class="post-meta">Autor: História & Tradição | 18 de Janeiro, 2024</div>
+      <p>O campo é berço de diversas lendas e histórias folclóricas brasileiras, como o Saci, a Mula-sem-cabeça e o Curupira.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Alimentação Caseira</h3>
+      <div class="post-meta">Autor: Sabores do Campo | 8 de Março, 2024</div>
+      <p>A comida do campo é marcada por receitas simples, feitas com ingredientes frescos e muitas vezes colhidos no próprio quintal.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Trabalho Rural</h3>
+      <div class="post-meta">Autor: Vida no Campo | 2 de Abril, 2024</div>
+      <p>O trabalho braçal no campo depende do conhecimento das estações, do solo e da adaptação às condições naturais locais.</p>
+    </article>
+  </section>
+&nbsp;
+&nbsp;
+
+  <section id="cidade" class="blog-category city" style="display:none;">
+    <h2>Curiosidades Sobre a Cidade</h2>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>São Paulo, a Maior Cidade</h3>
+      <div class="post-meta">Autor: Urbanista | 3 de Abril, 2024</div>
+      <p>São Paulo é a maior cidade do Brasil e uma das maiores do mundo, com mais de 12 milhões de habitantes na área urbana.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Movimento 24h</h3>
+      <div class="post-meta">Autor: Vida Urbana | 12 de Março, 2024</div>
+      <p>As cidades nunca param, com comércio, transporte e serviços funcionando quase o tempo todo para atender a demanda intensa.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Arranha-céus</h3>
+      <div class="post-meta">Autor: Arquitetura Moderna | 21 de Março, 2024</div>
+      <p>A cidade é marcada por edifícios altos que simbolizam o progresso e atraem milhares de trabalhadores diariamente.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Telhados Verdes e Sustentabilidade</h3>
+      <div class="post-meta">Autor: Eco City | 5 de Abril, 2024</div>
+      <p>Muitas cidades têm adotado projetos de telhados verdes para melhorar o clima urbano e aumentar áreas verdes.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Transporte Público Complexo</h3>
+      <div class="post-meta">Autor: Mobilidade Urbana | 27 de Fevereiro, 2024</div>
+      <p>O sistema de transporte em grandes cidades como Rio e SP inclui ônibus, metrôs, trens e ciclovias integradas, essenciais para o deslocamento.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Cultura e Entretenimento</h3>
+      <div class="post-meta">Autor: Eventos | 17 de Março, 2024</div>
+      <p>A cidade oferece teatros, cinemas, shows, museus e festivais que atraem pessoas de todas as idades e gostos.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Zona de Convivência</h3>
+      <div class="post-meta">Autor: Espaços Urbanos | 22 de Janeiro, 2024</div>
+      <p>Praças, parques e espaços públicos atuam como pontos de encontro, lazer e contato com a natureza dentro do ambiente urbano.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Museus icônicos</h3>
+      <div class="post-meta">Autor: Patrimônio Cultural | 30 de Março, 2024</div>
+      <p>Cidades brasileiras têm museus importantes, como o MASP em São Paulo, que guarda coleções valiosas de arte e história.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Gastronomia Variada</h3>
+      <div class="post-meta">Autor: Sabores da Cidade | 14 de Fevereiro, 2024</div>
+      <p>Nas cidades é possível encontrar restaurantes com culinárias do mundo inteiro, refletindo a diversidade cultural.</p>
+    </article>
+&nbsp;
+&nbsp;
+
+    <article class="post">
+      <h3>Desafios Urbanos</h3>
+      <div class="post-meta">Autor: Urbanismo | 9 de Abril, 2024</div>
+      <p>Grandes cidades enfrentam desafios como trânsito, poluição, segurança e desigualdade social, impulsionando iniciativas inovadoras.</p>
+    </article>
+  </section>
+</main>
+&nbsp;
+&nbsp;
+
+<footer>
+  <p>Blog feito com amor e curiosidade para te informar sobre o rural e o urbano! 🌱🏢</p>
+</footer>
+&nbsp;
+&nbsp;
+
+<script>
+  // Simple category tab switcher
+  function switchCategory(event) {
+    event.preventDefault();
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => link.classList.remove('active'));
+    event.target.classList.add('active');
+&nbsp;
+&nbsp;
+
+    const campoSection = document.getElementById('campo');
+    const cidadeSection = document.getElementById('cidade');
+&nbsp;
+&nbsp;
+
+    if(event.target.getAttribute('href') === '#campo') {
+      campoSection.style.display = 'block';
+      cidadeSection.style.display = 'none';
+    } else {
+      campoSection.style.display = 'none';
+      cidadeSection.style.display = 'block';
+    }
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+</script>
+&nbsp;
+&nbsp;
+
+</body>
+</html>
+&nbsp;
+&nbsp;
