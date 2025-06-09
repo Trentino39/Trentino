@@ -1,0 +1,182 @@
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+header h1 {
+    margin-right: 40px;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-bottom: 2px solid #1266c5;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav a {
+    color: #1266c5;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s, color 0.2s;
+}
+
+header nav a:hover {
+    background: #1266c5;
+    color: #fff;
+}
+
+header h1 {
+    color: #1266c5;
+    font-size: 3em;
+    text-align: left;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+body h1 {
+    color: #1266c5;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+body p {
+    color: #288dac;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+}
+body {
+    background: linear-gradient(135deg, #e3f0ff 0%, #f9f9f9 100%);
+}
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #1266c5;
+    margin-top: 250px;
+}
+.catalogo {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin-left: 325px;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.catalogo-item {
+    background: #162447;
+    border-radius: 18px;
+    overflow: visible;
+    box-shadow: 0 2px 12px rgba(22,36,71,0.18), 0 0 16px 2px #1b1b6e66, 0 2px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    padding: 18px;
+    border: 3px solid #1f4068; 
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    color: #fff;
+    word-break: break-word;
+    text-align: center;
+}
+.catalogo-item:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 32px 4px #1f4068cc, 0 4px 24px rgba(0,0,0,0.25);
+    border-color: #00b4d8; 
+}
+.catalogo-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+.btn-assinatura {
+    padding: 20px 60px;
+    font-size: 2rem;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-assinatura:hover {
+    background: linear-gradient(90deg, #0074d9 0%, #00c3ff 100%);
+    transform: scale(1.07);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+}
+.dev {
+    background: #162447;
+    border-radius: 18px;
+    overflow: visible;
+    box-shadow: 0 2px 12px rgba(22,36,71,0.18), 0 0 16px 2px #1b1b6e66, 0 2px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: 2 / 1;
+    justify-content: center;
+    padding: 18px;
+    border: 3px solid #1f4068; 
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    color: #fff;
+    word-break: break-word;
+    text-align: center;
+}
+.dev img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    margin-right: 00px;
+}
+.catalogo-dev {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin-left: 205px;
+    margin-right: auto;
+    padding: 20px;
+}
